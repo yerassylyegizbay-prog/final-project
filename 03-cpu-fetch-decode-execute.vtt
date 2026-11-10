@@ -1,0 +1,77 @@
+WEBVTT
+Kind: captions
+Language: en
+
+NOTE Computer Architecture — Lecture 2 (auto-generated captions)
+
+1
+00:00:00.000 --> 00:00:08.820
+<v Lecturer>Good morning everyone. Today we look inside the processor and answer one question: how does a CPU actually run a program?
+
+2
+00:00:08.820 --> 00:00:19.320
+<v Lecturer>A program is just a list of instructions stored in main memory, in RAM. The CPU reads them one by one and carries them out.
+
+3
+00:00:19.320 --> 00:00:27.720
+<v Lecturer>Inside the CPU there are three main parts. The arithmetic logic unit, the ALU, does calculations like addition and comparisons.
+
+4
+00:00:27.720 --> 00:00:38.220
+<v Lecturer>The control unit reads instructions and tells the other parts what to do. And the registers are tiny, very fast memory cells inside the CPU.
+
+5
+00:00:38.220 --> 00:00:44.940
+<v Lecturer>Some registers have special jobs. The program counter, PC, holds the address of the next instruction.
+
+6
+00:00:44.940 --> 00:00:50.820
+<v Lecturer>The current instruction register, CIR, holds the instruction that is being executed right now.
+
+7
+00:00:50.820 --> 00:01:03.420
+<v Lecturer>The memory address register, MAR, holds an address we want to read or write, and the memory data register, MDR, holds the data that was read or will be written.
+
+8
+00:01:03.420 --> 00:01:07.620
+<v Lecturer>The accumulator stores the results of calculations from the ALU.
+
+9
+00:01:07.620 --> 00:01:16.440
+<v Lecturer>Now, the CPU repeats the same three steps billions of times per second. We call this the fetch decode execute cycle.
+
+10
+00:01:16.440 --> 00:01:37.020
+<v Lecturer>Step one, fetch. The address in the program counter is copied to the MAR. The instruction at that address travels along the data bus into the MDR, and then it is copied into the CIR. The program counter is increased by one so it points to the next instruction.
+
+11
+00:01:37.020 --> 00:01:50.460
+<v Lecturer>Step two, decode. The control unit looks at the instruction and splits it into the opcode, which says what to do, and the operand, which says what data or address to use.
+
+12
+00:01:50.460 --> 00:02:03.900
+<v Lecturer>Step three, execute. The instruction is carried out. For example, ADD 5 makes the ALU add the value at address 5 to the accumulator. A jump instruction simply changes the program counter.
+
+13
+00:02:03.900 --> 00:02:07.680
+<v Lecturer>Then the cycle starts again with the next fetch.
+
+14
+00:02:07.680 --> 00:02:11.460
+<v Lecturer>Then the cycle starts again with the next fetch.
+
+15
+00:02:11.460 --> 00:02:19.860
+<v Lecturer>So what makes a CPU faster? First, clock speed. A three gigahertz CPU has three billion clock ticks per second.
+
+16
+00:02:19.860 --> 00:02:32.040
+<v Lecturer>Second, the number of cores. Each core can run its own fetch decode execute cycle, so a quad core CPU can work on four tasks at the same time.
+
+17
+00:02:32.040 --> 00:02:41.700
+<v Lecturer>Third, cache. Cache is small, fast memory close to the CPU that stores recently used data, so the CPU waits less for RAM.
+
+18
+00:02:41.700 --> 00:02:53.460
+<v Lecturer>For the exam, remember the order of the cycle, the job of each register, and the three factors that affect performance. Next week we will look at pipelining.
